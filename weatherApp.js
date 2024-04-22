@@ -11,7 +11,7 @@ const weatherAppForm = document.querySelector(".weatherAppContainer form");
 async function fetchDataFromApi(cityValue) {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`
     );
     const data = await response.json();
 
@@ -42,6 +42,7 @@ weatherAppForm.addEventListener("submit", async (event) => {
 
   try {
     data.cod == 200 ? generateWeatherData(data) : null;
+    console.log(data)
   } catch {
     null;
   }
@@ -53,9 +54,16 @@ function generateWeatherData(data) {
     ? weatherAppContainer.lastElementChild.remove()
     : null;
 
+
+
   const weatherData = document.createElement("div");
   weatherData.classList.add("weatherData");
   weatherAppContainer.appendChild(weatherData);
+
+  let cityName= document.createElement("span");
+    cityName.classList.add("cityName");
+    cityName.innerText=`${data.name} Weather:`
+    weatherData.appendChild(cityName);
 
   const weatherIcon = document.createElement("span");
   weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">`;
@@ -63,7 +71,7 @@ function generateWeatherData(data) {
   weatherData.appendChild(weatherIcon);
 
   const weatherTembrature = document.createElement("span");
-  weatherTembrature.innerText = `${data.main.temp}°C`;
+  weatherTembrature.innerText = `${Math.round(data.main.temp_max)}°C`;
   weatherTembrature.classList.add("weatherTembrature");
   weatherData.appendChild(weatherTembrature);
 

@@ -40,6 +40,15 @@ body {
   box-shadow: 0 0px rgba(0, 0, 255, 0.5);
   cursor: pointer;
 }
+.cityName{
+  text-align: left;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: -50px;
+  color: blue;
+}
 .weatherData {
   display: flex;
   flex-direction: column;
@@ -47,8 +56,7 @@ body {
   margin-top: 20px;
 }
 .weatherData .weatherIcon img {
-  width: 100px;
-  margin-bottom: 20px;
+  width: 200px;
 }
 .weatherData .weatherTembrature {
   font-size: 43px;
