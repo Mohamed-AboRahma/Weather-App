@@ -1,0 +1,95 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f7f7f7;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.weatherAppContainer {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 7rem 5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 2.5rem;
+}
+.weatherAppContainer .appLogo {
+  text-shadow: 2px 2px rgb(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+.weatherAppContainer form input {
+  border: none;
+  outline: none;
+  min-width: 300px;
+  padding: 20px;
+  font-size: 17px;
+}
+.weatherAppContainer form button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 0px rgba(0, 0, 255, 0.5);
+  cursor: pointer;
+}
+.weatherData {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 20px;
+}
+.weatherData .weatherIcon img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.weatherData .weatherTembrature {
+  font-size: 43px;
+  font-weight: bold;
+  text-shadow: 1px 0 0.3px black;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+.weatherData .description {
+  font-size: 19px;
+  letter-spacing: 2.4px;
+}
+
+.details {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.details span {
+  margin-left: 20px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.invaild {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  font-family: auto;
+}
+
+.invaildCity {
+  word-spacing: 5px;
+  letter-spacing: 0.7px;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: monospace;
+  text-shadow: 0 0 rgb(0 0 0 / 50%);
+}
+.invaild img {
+  width: 40px;
+  margin-right: 5px;
+}
