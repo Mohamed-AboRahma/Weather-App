@@ -42,7 +42,7 @@ weatherAppForm.addEventListener("submit", async (event) => {
 
   try {
     data.cod == 200 ? generateWeatherData(data) : null;
-    console.log(data)
+    console.log(data);
   } catch {
     null;
   }
@@ -54,16 +54,14 @@ function generateWeatherData(data) {
     ? weatherAppContainer.lastElementChild.remove()
     : null;
 
-
-
   const weatherData = document.createElement("div");
   weatherData.classList.add("weatherData");
   weatherAppContainer.appendChild(weatherData);
 
-  let cityName= document.createElement("span");
-    cityName.classList.add("cityName");
-    cityName.innerText=`${data.name} Weather:`
-    weatherData.appendChild(cityName);
+  let cityName = document.createElement("span");
+  cityName.classList.add("cityName");
+  cityName.innerText = `${data.name} Weather`;
+  weatherData.appendChild(cityName);
 
   const weatherIcon = document.createElement("span");
   weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">`;
