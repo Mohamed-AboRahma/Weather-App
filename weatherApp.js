@@ -42,7 +42,6 @@ weatherAppForm.addEventListener("submit", async (event) => {
 
   try {
     data.cod == 200 ? generateWeatherData(data) : null;
-    console.log(data);
   } catch {
     null;
   }
